@@ -33,9 +33,10 @@ export class CreateUsersComponent implements OnInit {
     this.userService.createUser(createUser).subscribe(data => {
       this.createUser.id = this.user.id
       if (data){
-        this.router.navigateByUrl(`/users/${this.user.id}`);
+        this.router.navigateByUrl(`/home`);
         console.log("navigating to", this.user.id)
       }
+      this.router.navigateByUrl(`/home`);
       console.log("User is Created ", data);
       this.ngOnInit();
     })
