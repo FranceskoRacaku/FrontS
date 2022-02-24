@@ -39,7 +39,7 @@ export class LoginUsersComponent implements OnInit {
     this.userService.login(this.loginObj).subscribe((data: any)=>{
       if (data.body.status === 'success'){
         // this.user.id = this.createUser.userId;
-        this.router.navigateByUrl("/profile");
+        this.router.navigateByUrl(`/users/${this.user.id}`);
       }
       console.log("User is Created ", data);
       this.ngOnInit();
