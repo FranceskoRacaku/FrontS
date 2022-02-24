@@ -25,7 +25,7 @@ export class FundService {
   
   updateFunds(fund: Fund): Observable<any>{
     
-    return this.http.put(`https://manythtry.herokuapp.com/funds/${fund.id}`, fund);
+    return this.http.patch(`https://manythtry.herokuapp.com/funds/${fund.id}`, fund);
   }
 
 

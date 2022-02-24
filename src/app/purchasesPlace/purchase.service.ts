@@ -37,7 +37,7 @@ export class PurchaseService {
   }
   updatePurchases(purchase: Purchase): Observable<any>{
     
-    return this.http.put(`https://manythtry.herokuapp.com/purchases/${purchase.id}`, purchase);
+    return this.http.patch(`https://manythtry.herokuapp.com/purchases/${purchase.id}`, purchase);
   }
 
 

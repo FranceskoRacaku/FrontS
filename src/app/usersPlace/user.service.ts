@@ -42,7 +42,7 @@ export class UserService {
   }
   updateUsers(user: User): Observable<any>{
     
-    return this.http.put(`https://manythtry.herokuapp.com/users/${user.id}`, user);
+    return this.http.patch(`https://manythtry.herokuapp.com/users/${user.id}`, user);
   }
 
 
