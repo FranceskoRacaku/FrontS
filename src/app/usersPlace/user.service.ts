@@ -21,33 +21,33 @@ export class UserService {
 
  postAccount() {
       let _;
-    return this.http.post('https://indcapstone.herokuapp.com/users', _, this.httpOptions);
+    return this.http.post('https://manythtry.herokuapp.com/users', _, this.httpOptions);
   }
  
   createUser(createUser: any) {
-    return this.http.post('https://indcapstone.herokuapp.com/users', createUser);
+    return this.http.post('https://manythtry.herokuapp.com/users', createUser);
   }
 
   login(obj: any) {
-    return this.http.post('https://indcapstone.herokuapp.com/users', obj, {responseType: 'text'});
+    return this.http.post('https://manythtry.herokuapp.com/users', obj, {responseType: 'text'});
   }
 
   deletePurchases(id: any) {
-    return this.http.delete(`https://indcapstone.herokuapp.com/users/${id}`,{responseType: 'text'});
+    return this.http.delete(`https://manythtry.herokuapp.com/users/${id}`,{responseType: 'text'});
   }
 
   getUsers(): Observable<any> {
-    return this.http.get("https://indcapstone.herokuapp.com/users");
+    return this.http.get("https://manythtry.herokuapp.com/users");
 
   }
   updateUsers(user: User): Observable<any>{
     
-    return this.http.patch(`https://indcapstone.herokuapp.com/users/${user.id}`, user);
+    return this.http.put(`https://manythtry.herokuapp.com/users/${user.id}`, user);
   }
 
 
   getUser(id: number): Observable<any> {
-    return this.http.get("https://indcapstone.herokuapp.com/users/"+id);
+    return this.http.get("https://manythtry.herokuapp.com/users/"+id);
 
   }
 
