@@ -19,7 +19,7 @@ export class PurchaseService {
     observe: 'response' as 'response',
   };
   createPurchase(createPurchase: any) {
-    return this.http.post('https://manythtry.herokuapp.com/purchases', createPurchase, this.httpOptions);
+    return this.http.post('https://manythtry.herokuapp.com/purchases', createPurchase);
   }
 
   deletePurchases(id: any) {
